@@ -31,11 +31,12 @@ class Shape {
 }
 
 const square = new Shape("Square", 4, 5 )
-console.log(square)
 square.calcPerimeter();
 
 const triangle = new Shape("Triangle", 3, 3);
 triangle.calcPerimeter();
+
+
 
 
 /*Задача.
@@ -46,13 +47,15 @@ triangle.calcPerimeter();
 
 
 class Square extends Shape {
-    calcArea(){
-        console.log(this.sideLength*this.sideLength);
-        super.name;
-        this.sides = 4;
-
-        constructor(this.sideLength)
+    
+    constructor(sideLength){
+        super("Square", 4, sideLength); // Call parent class constructor with required arguments
     }
+
+    calcArea(){
+        console.log(this.sideLength * this.sideLength);
+    }
+    
 }
 
 const square2 = new Square(4);
